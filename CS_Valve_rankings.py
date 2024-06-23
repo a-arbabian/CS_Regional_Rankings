@@ -85,7 +85,7 @@ def display_leaderboard(leaderboard_name):
             st.code(markdown_data[-1000:], language="markdown")
 
 def main():
-    st.set_page_config(layout="wide")  # Use wide layout for more space
+    st.set_page_config(layout="centered")  # Use wide layout for more space
     st.title("Counter-Strike Regional Standings")
 
     # Create tabs for each leaderboard
