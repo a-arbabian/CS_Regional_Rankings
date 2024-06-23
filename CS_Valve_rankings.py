@@ -66,7 +66,9 @@ def display_leaderboard(leaderboard_name):
             
             # Display the full table
             st.dataframe(df, height=35*len(df)+38, use_container_width=True, hide_index=True, 
-                         column_config={"Details": st.column_config.LinkColumn(display_text="Details")})
+                         column_config={"Details": st.column_config.LinkColumn(display_text="Details"),
+                                        "Standing": st.column_config.NumberColumn(),
+                                        "Points": st.column_config.NumberColumn()})
 
             # Display the timestamp from the Markdown file
             st.markdown(f"<p style='text-align: right; color: gray; font-size: small;'>Standings as of: {timestamp}</p>", unsafe_allow_html=True)
